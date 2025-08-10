@@ -1,0 +1,27 @@
+No, Date of
+Application,
+Product Name
+(Active
+Ingredient),
+Target
+Pest or
+Disease,
+Weather
+Conditions,
+Rate
+Used,
+Operator
+Name,
+PreHarvest
+Interval
+(PHI),
+
+{"web":{
+    "client_id":"793455011162-3r3q52bpnic9suvf9domsu625bof2u4p.apps.googleusercontent.com",
+    "client_email":"docs-api@jamon-467511.iam.gserviceaccount.com",
+    "project_id":"jamon-467511",
+    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret":"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"
+}}
