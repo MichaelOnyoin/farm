@@ -9,8 +9,8 @@ export default function SpreadsheetViewer({ type }: Props) {
   const [data, setData] = useState<string[][]>([])
 
   useEffect(() => {
-    //fetch(`/api/google/view/?type=${type}`)
-    fetch(`/api/google/view?type=${type}`)
+    //fetch(`/api/google/view?type=${type}`)
+    fetch(`/api/data-view?type=${type}`)
       .then((res) => res.json())
       .then((data) => setData(data.rows || []))
   }, [type])

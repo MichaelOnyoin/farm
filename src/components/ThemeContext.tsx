@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType>({
   toggleTheme: () => {},
 });
 
-export const ThemeProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+export const ThemeProvider: React.FC<React.PropsWithChildren<unknown>> = ({ children }) => {
   const [theme, setTheme] = useState('dark'); // Default theme
 
   // Load theme from local storage on mount
