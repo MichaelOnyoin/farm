@@ -1,3 +1,4 @@
+'use server'
 import { google } from 'googleapis'
 import { NextRequest } from 'next/server'
 import path from 'path'
@@ -6,13 +7,36 @@ import { promises as fs } from 'fs'
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 const SHEET_ID = '1m0nsZI_XXvAWiye8Oop8HCPfhwPbmy02Gn_h53kYVGc' // replace with your actual Sheet ID
 
+// interface GoogleServiceAccount {
+//   type: string
+//   project_id: string
+//   private_key_id: string
+//   private_key: string
+//   client_email: string
+//   client_id: string
+//   auth_uri: string
+//   token_uri: string
+//   auth_provider_x509_cert_url: string
+//   client_x509_cert_url: string
+//   universe_domain: string
+// }
+
+// type Json =
+//   | string
+//   | number
+//   | boolean
+//   | null
+//   | Json[]
+//   | { [key: string]: Json }
+
+
 // Load credentials
 async function getAuth() {
   const keyFilePath = path.join(process.cwd(), 'config', 'google-service-account.json')
   const content = await fs.readFile(keyFilePath, 'utf-8')
-  //const content :json = process.env.GOOGLE_SERVICE_ACCOUNT || '{}';
+  //const jsonString = process.env.GOOGLE_SERVICE_ACCOUNT || '{}';
   const credentials = JSON.parse(content)
-
+  //const credentials: GoogleServiceAccount = JSON.parse(jsonString)
   const auth = new google.auth.GoogleAuth({
     credentials,
     scopes: SCOPES,

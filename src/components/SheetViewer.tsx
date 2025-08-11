@@ -16,13 +16,15 @@ export default function SpreadsheetViewer({ type }: Props) {
   }, [type])
 
   return (
-    <div className="overflow-auto mt-4 border rounded">
+    <div className='w-full'>
+    
       <h2 className="font-bold mb-2 capitalize">{type} Records</h2>
+      <div className="overflow-auto mt-4 border rounded">
       <table className="table-auto border-collapse w-full">
         <thead>
           <tr>
             {data[0]?.map((head, i) => (
-              <th key={i} className="border px-2 py-1 bg-gray-100">{head}</th>
+              <th key={i} className="border px-2 py-1 bg-green-50">{head}</th>
             ))}
           </tr>
         </thead>
@@ -36,6 +38,7 @@ export default function SpreadsheetViewer({ type }: Props) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   )
 }
