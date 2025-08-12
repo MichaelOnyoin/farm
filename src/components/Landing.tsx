@@ -1,22 +1,10 @@
-// app/page.tsx
-//import Image from "next/image";
 
 export default function Hero() {
   return (
     <main className="bg-green-50 text-gray-800">
       {/* Header */}
-      <header className="bg-green-600 text-white">
-        <div className="w-full mx-auto flex items-center justify-between px-6 py-4">
-          {/* <h1 className="text-2xl font-bold">🥑 Fresh Avocado Co.</h1> */}
-          <img src="jamon-back.png" alt="" className="h-40 w-40 fit" />
-          <nav>
-            <a href="#about" className="px-3 hover:underline">About</a>
-            <a href="#products" className="px-3 hover:underline">Products</a>
-            <a href="#contact" className="px-3 hover:underline">Contact</a>
-          </nav>
-        </div>
-      </header>
-
+      
+      
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-4xl font-bold mb-4">The Freshest Avocados, Delivered to You</h2>
@@ -90,11 +78,8 @@ export default function Hero() {
           </a>
         </div>
       </section>
-
-      {/* Footer */}
-      {/* <footer className="bg-green-600 text-white text-center py-4">
-        &copy; {new Date().getFullYear()} Fresh Avocado Co. All rights reserved.
-      </footer> */}
+     
+     
     </main>
   );
 }

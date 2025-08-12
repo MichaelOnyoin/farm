@@ -16,8 +16,8 @@ export default function SpreadsheetViewer({ type }: Props) {
   }, [type])
 
   return (
-    <div className='w-full'>
-    
+    <div className='w-full container mx-auto mb-10' id='view'>
+
       <h2 className="font-bold mb-2 capitalize">{type} Records</h2>
       <div className="overflow-auto mt-4  rounded">
       <table className="table-auto w-full">
