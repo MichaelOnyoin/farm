@@ -19,12 +19,12 @@ export default function SpreadsheetViewer({ type }: Props) {
     <div className='w-full'>
     
       <h2 className="font-bold mb-2 capitalize">{type} Records</h2>
-      <div className="overflow-auto mt-4 border rounded">
-      <table className="table-auto border-collapse w-full">
+      <div className="overflow-auto mt-4  rounded">
+      <table className="table-auto w-full">
         <thead>
           <tr>
             {data[0]?.map((head, i) => (
-              <th key={i} className="border px-2 py-1 bg-green-50">{head}</th>
+              <th key={i} className="border px-2 py-1 bg-green-400">{head}</th>
             ))}
           </tr>
         </thead>
@@ -32,7 +32,7 @@ export default function SpreadsheetViewer({ type }: Props) {
           {data.slice(1).map((row, i) => (
             <tr key={i}>
               {row.map((cell, j) => (
-                <td key={j} className="border px-2 py-1">{cell}</td>
+                <td key={j} className="border border border-gray-500 px-2 py-1">{cell}</td>
               ))}
             </tr>
           ))}

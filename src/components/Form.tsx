@@ -1,8 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import SpreadsheetViewer from '@/components/SheetViewer'
-import Hero from '@/components/Landing'
-
 export default function Home() {
   const [form, setForm] = useState({
     type: 'spray', // or 'fertilizer'
@@ -17,7 +14,7 @@ export default function Home() {
     fertilizerType: '',
     method: '',
   })
-  
+
   //fetch latest number when type changes
   useEffect(() => {
     async function fetchLatestNo() {
@@ -27,7 +24,7 @@ export default function Home() {
     }
     fetchLatestNo()
   }, [form.type])
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
@@ -44,8 +41,8 @@ export default function Home() {
   }
 //add auto increasing numbers
   return (
-    <main className="p-6 w-full bg-white">
-      <Hero />
+    <main className="p-6 w-full bg-white" id="form">
+
       <h1 className="text-2xl font-bold mb-4">Spray & Fertilizer Application Records</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4 ">
@@ -75,7 +72,7 @@ export default function Home() {
             </div>
             <div>
               <label htmlFor="rate">Rate Used</label>
-              <input name="rate" placeholder="20ml / 20 litres" onChange={handleChange} className="w-full border p-2" required/>
+              <input name="rate" placeholder="Rate Used" onChange={handleChange} className="w-full border p-2" required/>
             </div>
             <div>
               <label htmlFor="operator">Operator Name</label>
@@ -109,8 +106,7 @@ export default function Home() {
 
         <button type="submit" className="bg-green-600 right-4 mb-4 text-white px-4 py-2 rounded">Submit</button>
       </form>
-      <SpreadsheetViewer type={'spray'} />
-      <SpreadsheetViewer type={'fertilizer'} />
+      
     </main>
   )
 }

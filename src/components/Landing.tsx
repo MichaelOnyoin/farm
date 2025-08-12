@@ -49,29 +49,23 @@ export default function Hero() {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Fresh Basket",
+                title: "Grade A",
                 desc: "Perfectly ripe avocados, delivered in eco-friendly packaging.",
                 img: "https://images.unsplash.com/photo-1606788075761-618c3fd45d1e",
               },
               {
-                title: "Avocado Toast Kit",
+                title: "Grade B",
                 desc: "Includes fresh avocados, sourdough bread, and seasoning.",
                 img: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba",
               },
               {
-                title: "Guacamole Pack",
+                title: "Grade C",
                 desc: "All you need for the ultimate party guac.",
                 img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
               },
             ].map((product, index) => (
               <div key={index} className="bg-white rounded-lg shadow p-4">
-                {/* <Image
-                  src={product.img}
-                  alt={product.title}
-                  width={400}
-                  height={300}
-                  className="rounded-lg mb-4"
-                /> */}
+                
                 <img src={product.img} alt={product.title} className="rounded-lg mb-4 w-full h-100 object-cover" />
                 <h4 className="text-lg font-semibold">{product.title}</h4>
                 <p className="text-gray-600">{product.desc}</p>
@@ -98,9 +92,9 @@ export default function Hero() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-600 text-white text-center py-4">
+      {/* <footer className="bg-green-600 text-white text-center py-4">
         &copy; {new Date().getFullYear()} Fresh Avocado Co. All rights reserved.
-      </footer>
+      </footer> */}
     </main>
   );
 }
